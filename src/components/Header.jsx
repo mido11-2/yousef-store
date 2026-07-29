@@ -3,7 +3,7 @@ function Header({ search, setSearch }) {
     <header className="header">
       <div className="header-info">
         <h1>🎮 <span>Yousef Store</span></h1>
-        <p>Premium PS4 Games Library</p>
+        
       </div>
 
       <div className="search-box">
