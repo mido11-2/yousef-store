@@ -155,15 +155,13 @@ button{
 
 .search{
     width:100%;
-    max-width:420px;
-    padding:14px 18px;
+    padding:14px 18px 14px 48px;
     border:none;
     outline:none;
     border-radius:18px;
     background:#1f2937;
     color:#fff;
     font-size:15px;
-    transition:.3s;
 }
 
 .search::placeholder{
@@ -1222,28 +1220,29 @@ transform:translateY(0);
 @media (max-width:768px){
 
     .header{
-        flex-direction:column;
-        align-items:center;
-        text-align:center;
-        gap:15px;
-        padding:18px;
-    }
+    padding:12px 16px;
+    gap:10px;
+    border-radius:16px;
+}
 
-    .header h1{
-        font-size:30px;
-        line-height:1.2;
-    }
+.header h1{
+    font-size:24px;
+}
 
-    .header p{
-        font-size:14px;
-    }
+.header p{
+    font-size:12px;
+    margin-top:4px;
+}
 
-    .search{
-        width:100%;
-        padding:14px 16px;
-        border-radius:15px;
-        font-size:15px;
-    }
+.search-box{
+    width:260px;
+}
+
+.search{
+    padding:10px 14px;
+    font-size:14px;
+    border-radius:12px;
+}
 
     .banner{
         height:260px;
@@ -1332,7 +1331,18 @@ transform:translateY(0);
         align-items:center;
     }
 
-    .search-box{
-        width:100%;
-    }
+.search-box{
+    position:relative;
+    width:420px;
+    max-width:100%;
+}
+.search-icon{
+    position:absolute;
+    left:16px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:18px;
+    color:#9ca3af;
+    pointer-events:none;
+}
 }

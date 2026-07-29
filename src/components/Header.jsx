@@ -7,13 +7,17 @@ function Header({ search, setSearch }) {
       </div>
 
       <div className="search-box">
-        <input
-          className="search"
-          type="text"
-          placeholder="Search games..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
+        <div className="search-box">
+  <span className="search-icon">🔍</span>
+
+  <input
+    className="search"
+    type="text"
+    placeholder="Search..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+  />
+</div>
       </div>
     </header>
   );
