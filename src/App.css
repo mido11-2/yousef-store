@@ -124,15 +124,17 @@ button{
 }
 
 .header h1{
-
-    font-size:44px;
-
-    color:#0070d1;
-
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:40px;
     font-weight:800;
+    color:#fff;
+}
 
+.header h1 span{
+    color:#3ea6ff;
     letter-spacing:1px;
-
 }
 
 .header p{
@@ -144,27 +146,24 @@ button{
 }
 
 .search{
-
-    width:430px;
-
-    max-width:100%;
-
-    padding:16px 18px;
-
+    width:100%;
+    max-width:420px;
+    padding:14px 18px;
     border:none;
-
     outline:none;
-
-    border-radius:14px;
-
-    background:#1b2232;
-
-    color:white;
-
-    font-size:16px;
-
+    border-radius:18px;
+    background:#1f2937;
+    color:#fff;
+    font-size:15px;
     transition:.3s;
+}
 
+.search::placeholder{
+    color:#9ca3af;
+}
+
+.search:focus{
+    box-shadow:0 0 0 3px rgba(0,112,209,.3);
 }
 
 .search:focus{
@@ -1228,53 +1227,103 @@ transform:translateY(0);
 }
 
 @media (max-width:768px){
-    .games-grid{
-        grid-template-columns:repeat(3,1fr);
-        gap:12px;
+
+    .header{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:15px;
+        padding:18px;
     }
 
-    .card-image{
-        height:160px;
+    .header h1{
+        font-size:30px;
+        line-height:1.2;
     }
 
-    .card-content{
-        padding:10px;
-    }
-
-    .card-content h2{
+    .header p{
         font-size:14px;
-        min-height:auto;
-        margin-bottom:8px;
     }
 
-    .rating{
-        font-size:12px;
-        margin-bottom:8px;
-    }
-
-    .platform{
-        font-size:11px;
-        padding:5px 8px;
-    }
-
-    .category{
-        font-size:11px;
-        margin-bottom:10px;
-    }
-
-    .buy-btn{
-        padding:10px;
-        font-size:12px;
-    }
-
-    .fav-btn{
-        width:34px;
-        height:34px;
+    .search{
+        width:100%;
+        padding:14px 16px;
+        border-radius:15px;
         font-size:15px;
     }
 
-    .badge{
-        font-size:10px;
-        padding:4px 8px;
+    .banner{
+        height:260px;
+        padding:20px;
+        margin-bottom:30px;
     }
+
+    .banner-content h2{
+        font-size:30px;
+        line-height:1.2;
+    }
+
+    .banner-content p{
+        font-size:15px;
+        margin-bottom:18px;
+    }
+
+    .banner-btn{
+        padding:10px 20px;
+        font-size:14px;
+    }
+
+    .games-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+    }
+
+    .card{
+        border-radius:14px;
+    }
+
+    .card-image{
+        height:150px;
+    }
+
+    .card-content{
+        padding:8px;
+    }
+
+    .card-content h2{
+        color:#fff;
+        font-size:13px;
+        font-weight:700;
+        line-height:1.3;
+        text-align:center;
+        min-height:34px;
+        margin-bottom:6px;
+        text-shadow:0 2px 6px rgba(0,0,0,.6);
+    }
+
+    .rating{
+        font-size:11px;
+        margin-bottom:6px;
+    }
+
+    .platform{
+        font-size:10px;
+        padding:4px 7px;
+    }
+
+    .category{
+        font-size:10px;
+        margin-bottom:8px;
+    }
+
+    .buy-btn{
+        padding:8px;
+        font-size:11px;
+    }
+
+    .fav-btn,
+    .badge{
+        display:none !important;
+    }
+
 }

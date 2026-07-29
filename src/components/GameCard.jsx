@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function GameCard({ game }) {
-  const [favorite, setFavorite] = useState(false);
+  
   const [showOptions, setShowOptions] = useState(false);
 
   return (
@@ -9,26 +9,19 @@ function GameCard({ game }) {
 
       <div className="card-image">
 
-        {game.isNew && (
-          <span className="badge">🔥 NEW</span>
-        )}
+       
 
         <img src={game.image} alt={game.name} />
 
         <div className="image-overlay"></div>
 
-        <button
-          className={`fav-btn ${favorite ? "active" : ""}`}
-          onClick={() => setFavorite(!favorite)}
-        >
-          ❤
-        </button>
+        
 
       </div>
 
       <div className="card-content">
 
-        <h2>{game.name}</h2>
+        <h2 className="game-title">{game.name}</h2>
 
         <div className="rating">
           ⭐⭐⭐⭐⭐
