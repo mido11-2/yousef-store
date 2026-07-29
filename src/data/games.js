@@ -185,6 +185,9 @@ import nar from "../assets/games/nar.png";
 import nfsh from "../assets/games/nfsh.png";
 import mm from "../assets/games/mm.png";
 import min from "../assets/games/min.png";
+import mor1 from "../assets/games/mor1.png";
+import mor2 from "../assets/games/mor2.png";
+import mare from "../assets/games/mara.png";
 
 
 const games = [
@@ -671,6 +674,59 @@ const games = [
       {
         label: "ميدو",
         whatsapp: "https://wa.me/201026797229?text=أريد شراء لعبة God of War",
+      },
+    ],
+  },{
+    id: 190,
+    name: "Marvel's Avengers",
+    image: mara,
+    platform: "PS4",
+    category: "أكشن",
+    isNew: true,
+    whatsappOptions: [
+      {
+        label: "يوسف",
+        whatsapp: "https://wa.me/201555371568?text=أريد شراء لعبة Marvel's Avengers",
+      },
+      {
+        label: "ميدو",
+        whatsapp: "https://wa.me/201026797229?text=أريد شراء لعبة Marvel's Avengers",
+      },
+    ],
+  },
+  {
+    id: 191,
+    name: "Mortal Kombat 11",
+    image: mor1,
+    platform: "PS4",
+    category: "أكشن",
+    isNew: true,
+    whatsappOptions: [
+      {
+        label: "يوسف",
+        whatsapp: "https://wa.me/201555371568?text=أريد شراء لعبة Mortal Kombat 11",
+      },
+      {
+        label: "ميدو",
+        whatsapp: "https://wa.me/201026797229?text=أريد شراء لعبة Mortal Kombat 11",
+      },
+    ],
+  },
+  {
+    id: 192,
+    name: "Mortal Kombat XL",
+    image: mor2,
+    platform: "PS4",
+    category: "أكشن",
+    isNew: true,
+    whatsappOptions: [
+      {
+        label: "يوسف",
+        whatsapp: "https://wa.me/201555371568?text=أريد شراء لعبة Mortal Kombat XL",
+      },
+      {
+        label: "ميدو",
+        whatsapp: "https://wa.me/201026797229?text=أريد شراء لعبة Mortal Kombat XL",
       },
     ],
   },
