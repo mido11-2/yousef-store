@@ -1,8 +1,11 @@
 /* =====================================================
-   YOUSEF STORE - PREMIUM UI (FULL, CLEANED, FIXED)
+   YOUSEF STORE - PREMIUM UI
+   PART 1
+   RESET + BODY + APP + HEADER + HERO
 ===================================================== */
 
 /* ---------- RESET ---------- */
+
 *{
     margin:0;
     padding:0;
@@ -14,64 +17,111 @@ html{
 }
 
 body{
+
     font-family:Arial,Helvetica,sans-serif;
-    background:radial-gradient(circle at top,#1a2440 0%,#0d1117 40%,#090d13 100%);
+
+    background:
+    radial-gradient(circle at top,#1a2440 0%,#0d1117 40%,#090d13 100%);
+
     color:#fff;
+
     overflow-x:hidden;
+
 }
 
 a{
+
     text-decoration:none;
+
     color:inherit;
+
 }
 
 button{
+
     font-family:inherit;
+
     cursor:pointer;
+
     transition:.3s;
+
 }
 
 /* ---------- SCROLLBAR ---------- */
+
 ::-webkit-scrollbar{
+
     width:10px;
+
 }
+
 ::-webkit-scrollbar-track{
+
     background:#111827;
+
 }
+
 ::-webkit-scrollbar-thumb{
+
     background:#0070d1;
+
     border-radius:20px;
+
 }
+
 ::-webkit-scrollbar-thumb:hover{
+
     background:#2b8cff;
+
 }
 
 /* ---------- APP ---------- */
+
 .app{
+
     width:95%;
+
     max-width:1500px;
+
     margin:auto;
+
     padding:25px 0 60px;
+
 }
 
 /* ---------- HEADER ---------- */
-.header{
-    position:sticky;
-    top:15px;
-    z-index:999;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:25px;
-    padding:18px 25px;
-    margin-bottom:35px;
-    border-radius:20px;
-    background:rgba(17,24,39,.75);
-    backdrop-filter:blur(20px);
-    border:1px solid rgba(255,255,255,.06);
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
-}
 
+.header{
+
+    position:sticky;
+
+    top:15px;
+
+    z-index:999;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:18px 25px;
+
+    margin-bottom:35px;
+
+    border-radius:20px;
+
+    background:rgba(17,24,39,.75);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.06);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
 .header-info{
     display:flex;
     flex-direction:column;
@@ -81,7 +131,6 @@ button{
     width:420px;
     max-width:100%;
 }
-
 .header h1{
     display:flex;
     align-items:center;
@@ -97,8 +146,11 @@ button{
 }
 
 .header p{
+
     margin-top:8px;
+
     color:#b8c0cc;
+
 }
 
 .search{
@@ -119,525 +171,1041 @@ button{
 }
 
 .search:focus{
+    box-shadow:0 0 0 3px rgba(0,112,209,.3);
+}
+
+.search:focus{
+
     background:#222d44;
+
     box-shadow:0 0 0 4px rgba(0,112,209,.25);
+
 }
 
 /* ---------- HERO ---------- */
+
 .banner{
+
     position:relative;
+
     height:500px;
+
     border-radius:24px;
+
     overflow:hidden;
+
     display:flex;
+
     align-items:center;
+
     padding:70px;
+
     margin-bottom:60px;
-    background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.60)),
-               url("https://images6.alphacoders.com/131/1319754.jpeg");
+
+    background:
+
+    linear-gradient(
+
+    rgba(0,0,0,.45),
+
+    rgba(0,0,0,.60)
+
+    ),
+
+    url("https://images6.alphacoders.com/131/1319754.jpeg");
+
     background-size:cover;
+
     background-position:center;
-    box-shadow:0 25px 60px rgba(0,0,0,.45);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.45);
+
 }
 
+/* Glow */
+
 .banner::before{
+
     content:"";
+
     position:absolute;
+
     inset:0;
-    background:radial-gradient(circle at right,rgba(0,112,209,.35),transparent 55%);
+
+    background:
+
+    radial-gradient(circle at right,
+
+    rgba(0,112,209,.35),
+
+    transparent 55%);
+
 }
 
 .banner::after{
+
     content:"";
+
     position:absolute;
+
     inset:0;
+
     backdrop-filter:blur(2px);
+
 }
 
+/* Content */
+
 .banner-content{
+
     position:relative;
+
     z-index:2;
+
     max-width:650px;
+
 }
 
 .banner-content h2{
+
     font-size:62px;
+
     line-height:1.15;
+
     margin-bottom:20px;
+
 }
 
 .banner-content p{
+
     font-size:20px;
+
     color:#d9d9d9;
+
     line-height:1.8;
+
     margin-bottom:30px;
+
 }
 
+/* Button */
+
 .banner-btn{
+
     border:none;
+
     border-radius:14px;
+
     padding:17px 45px;
+
     font-size:18px;
+
     font-weight:bold;
+
     color:#fff;
-    background:linear-gradient(135deg,#0070d1,#2b8cff);
-    box-shadow:0 15px 35px rgba(0,112,209,.35);
+
+    background:
+
+    linear-gradient(135deg,#0070d1,#2b8cff);
+
+    box-shadow:
+
+    0 15px 35px rgba(0,112,209,.35);
+
 }
 
 .banner-btn:hover{
-    transform:translateY(-4px) scale(1.03);
-    box-shadow:0 20px 45px rgba(0,112,209,.55);
+
+    transform:
+
+    translateY(-4px)
+
+    scale(1.03);
+
+    box-shadow:
+
+    0 20px 45px rgba(0,112,209,.55);
+
 }
 
+/* Floating Light */
+
 .banner-content::after{
+
     content:"";
+
     position:absolute;
+
     width:260px;
+
     height:260px;
+
     background:#0070d1;
+
     filter:blur(160px);
+
     opacity:.18;
+
     left:-80px;
+
     top:-60px;
+
     z-index:-1;
+
 }
 
 /* ---------- TITLES ---------- */
+
 .section-title{
+
     text-align:center;
+
     font-size:40px;
+
     margin-bottom:35px;
+
     font-weight:800;
+
 }
+/* =====================================================
+   PART 2
+   FILTER + GRID + PREMIUM GAME CARD
+===================================================== */
 
 /* ---------- FILTER ---------- */
+
 .filter-bar{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:15px;
+
     margin-bottom:45px;
+
 }
 
 .filter-btn{
+
     padding:13px 24px;
-    border:1px solid rgba(255,255,255,.05);
+
+    border:none;
+
     border-radius:30px;
+
     background:#1b2232;
+
     color:white;
+
     font-size:15px;
+
     font-weight:600;
+
     transition:.35s;
+
+    border:1px solid rgba(255,255,255,.05);
+
 }
 
 .filter-btn:hover{
+
     background:#0070d1;
+
     transform:translateY(-3px);
+
     box-shadow:0 12px 25px rgba(0,112,209,.35);
+
 }
 
 .filter-btn.active{
+
     background:linear-gradient(135deg,#0070d1,#2996ff);
+
 }
 
-/* ---------- GRID (base / large desktop) ---------- */
+/* ---------- GRID ---------- */
+
 .games-grid{
     display:grid;
-    grid-template-columns:repeat(6,1fr);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
 }
 
 /* ---------- CARD ---------- */
+
 .card{
+
     position:relative;
+
     overflow:hidden;
+
     border-radius:22px;
+
     background:#243047;
+
     border:1px solid rgba(255,255,255,.06);
+
     transition:.4s;
+
     animation:cardFade .8s ease both;
-    box-shadow:0 15px 30px rgba(0,0,0,.35);
-    display:flex;
-    flex-direction:column;
+
+    box-shadow:
+
+    0 15px 30px rgba(0,0,0,.35);
+
 }
 
+/* Glow */
+
 .card::before{
+
     content:"";
+
     position:absolute;
+
     inset:-2px;
-    background:linear-gradient(135deg,#0070d1,#25D366,#0070d1);
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #0070d1,
+
+    #25D366,
+
+    #0070d1
+
+    );
+
     opacity:0;
+
     transition:.4s;
+
 }
 
 .card>*{
+
     position:relative;
+
     z-index:2;
+
 }
 
 .card:hover{
-    transform:translateY(-12px) scale(1.02);
-    box-shadow:0 25px 50px rgba(0,112,209,.30);
+
+    transform:
+
+    translateY(-12px)
+
+    scale(1.02);
+
+    box-shadow:
+
+    0 25px 50px rgba(0,112,209,.30);
+
 }
 
 .card:hover::before{
+
     opacity:.18;
+
 }
 
 /* ---------- IMAGE ---------- */
+
 .card-image{
-    position:relative;
-    width:100%;
-    aspect-ratio:3 / 4;
-    overflow:hidden;
-    border-radius:14px 14px 0 0;
-    background:#111827;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+    background: #111827;
 }
 
 .card-image img{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center top;
-    transition:transform .3s ease;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform .3s ease;
 }
 
 .card:hover .card-image img{
-    transform:scale(1.05);
+    transform: scale(1.05);
 }
 
-/* Overlay gradient on the image itself (darkens bottom for text legibility) */
-.card-image::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to top,rgba(0,0,0,.65),transparent 50%);
+.card:hover img{
+
+    transform:scale(1.08);
+
 }
 
-.card:hover .card-image::after{
-    background:linear-gradient(to top,rgba(0,112,209,.18),transparent 50%);
-}
+/* Overlay */
 
-/* Extra overlay element used inside markup, if present */
 .image-overlay{
+
     position:absolute;
+
     inset:0;
-    background:linear-gradient(to top,rgba(0,0,0,.25),transparent);
+
+    background:
+    
+    linear-gradient(
+    to top,
+    rgba(0,0,0,.25),
+    transparent
+    );
 }
 
 /* Badge */
+
 .badge{
+
     position:absolute;
+
     top:15px;
+
     left:15px;
+
     z-index:20;
+
     padding:7px 14px;
+
     border-radius:30px;
+
     background:#ff3b5c;
+
     color:white;
+
     font-size:12px;
+
     font-weight:bold;
-    box-shadow:0 10px 25px rgba(255,59,92,.35);
+
+    box-shadow:
+
+    0 10px 25px rgba(255,59,92,.35);
+
 }
 
 /* ---------- FAVORITE ---------- */
+
 .fav-btn{
+
     position:absolute;
+
     top:15px;
+
     right:15px;
+
     width:46px;
+
     height:46px;
+
     border:none;
+
     border-radius:50%;
+
     background:rgba(0,0,0,.55);
+
     color:white;
+
     font-size:19px;
+
     z-index:25;
+
     transition:.3s;
+
 }
 
 .fav-btn:hover{
+
     transform:scale(1.15);
+
 }
 
 .fav-btn.active{
+
     background:#ff3b5c;
+
     animation:heart .35s;
-    box-shadow:0 0 18px rgba(255,59,92,.6);
+
+    box-shadow:
+
+    0 0 18px rgba(255,59,92,.6);
+
 }
 
 /* ---------- CONTENT ---------- */
+
 .card-content{
-    padding:6px 8px 14px;
-    flex:1;
-    display:flex;
-    flex-direction:column;
+
+    padding:6px 8px;
+
 }
 
 .card-content h2{
+
     font-size:21px;
+
     line-height:1.5;
+
+    min-height:62px;
+
     margin-bottom:18px;
 
-    /* prevents long titles from ever breaking the card layout, at any screen size */
-    white-space:normal;
-    word-wrap:break-word;
-    overflow-wrap:break-word;
-    max-width:100%;
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
 }
 
+
+
 /* ---------- INFO ---------- */
+
 .game-info{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     margin-bottom:18px;
-    flex-wrap:wrap;
-    gap:8px;
+
 }
 
 .platform{
+
     padding:7px 14px;
+
     border-radius:30px;
+
     background:#0070d1;
+
     font-size:13px;
+
     font-weight:bold;
-    white-space:nowrap;
+
 }
 
 .category{
+
     color:#c3c3c3;
+
+    margin-bottom:20px;
+
     font-size:15px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+
 }
 
 /* ---------- BUY BUTTON ---------- */
+
 .buy-btn{
+
     width:100%;
+
     border:none;
+
     border-radius:14px;
+
     padding:15px;
-    background:linear-gradient(135deg,#25D366,#19b955);
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #25D366,
+
+    #19b955
+
+    );
+
     color:white;
+
     font-size:16px;
+
     font-weight:bold;
-    box-shadow:0 15px 30px rgba(37,211,102,.25);
-    position:relative;
-    overflow:hidden;
+
+    box-shadow:
+
+    0 15px 30px rgba(37,211,102,.25);
+
 }
 
 .buy-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 20px 35px rgba(37,211,102,.45);
-}
 
-.buy-btn::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-120%;
-    width:70%;
-    height:100%;
-    transform:skewX(-25deg);
-    background:rgba(255,255,255,.25);
-    transition:.6s;
-}
+    transform:
 
-.buy-btn:hover::before{
-    left:150%;
+    translateY(-3px);
+
+    box-shadow:
+
+    0 20px 35px rgba(37,211,102,.45);
+
 }
 
 /* ---------- ORDER MENU ---------- */
+
 .order-wrapper{
+
     position:relative;
+
 }
 
 .order-menu{
+
     position:absolute;
+
     left:0;
+
     right:0;
+
     bottom:calc(100% + 10px);
+
     border-radius:15px;
+
     overflow:hidden;
+
     background:#1b2232;
+
     border:1px solid rgba(255,255,255,.08);
+
     animation:fadeUp .25s;
-    box-shadow:0 20px 40px rgba(0,0,0,.45);
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.45);
+
 }
 
 .order-option{
+
     display:flex;
+
     justify-content:center;
+
     align-items:center;
+
     padding:14px;
+
     color:white;
+
     font-weight:bold;
+
     transition:.3s;
+
     border-bottom:1px solid rgba(255,255,255,.05);
+
 }
 
 .order-option:last-child{
+
     border-bottom:none;
+
 }
 
 .order-option:hover{
+
     background:#25D366;
+
     color:#111827;
+
 }
 
 /* ---------- ANIMATIONS ---------- */
+
 @keyframes cardFade{
-    from{ opacity:0; transform:translateY(45px); }
-    to{ opacity:1; transform:translateY(0); }
+
+from{
+
+opacity:0;
+
+transform:translateY(45px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
 }
 
 @keyframes heart{
-    0%{ transform:scale(.7); }
-    60%{ transform:scale(1.25); }
-    100%{ transform:scale(1); }
+
+0%{
+
+transform:scale(.7);
+
 }
 
-@keyframes fadeUp{
-    from{ opacity:0; transform:translateY(40px); }
-    to{ opacity:1; transform:translateY(0); }
+60%{
+
+transform:scale(1.25);
+
 }
 
-@keyframes skeleton{
-    100%{ transform:translateX(100%); }
+100%{
+
+transform:scale(1);
+
 }
 
-.fade-up{
-    animation:fadeUp .8s ease both;
-}
+}/* =====================================================
+   PART 3
+   FOOTER + SCROLL BUTTON + LOADING + EFFECTS
+===================================================== */
 
 /* ---------- STATS ---------- */
+
 .stats{
+
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
+
     gap:25px;
+
     margin:50px 0;
+
 }
 
 .stat-card{
+
     background:rgba(255,255,255,.04);
+
     border:1px solid rgba(255,255,255,.06);
+
     border-radius:18px;
+
     padding:25px;
+
     text-align:center;
+
     transition:.35s;
+
     backdrop-filter:blur(12px);
+
 }
 
 .stat-card:hover{
+
     transform:translateY(-8px);
+
     background:rgba(0,112,209,.12);
+
     box-shadow:0 18px 35px rgba(0,112,209,.25);
+
 }
 
 .stat-card h2{
+
     font-size:34px;
+
     margin-bottom:12px;
+
     color:#3ea6ff;
+
 }
 
 .stat-card span{
+
     color:#cfcfcf;
+
 }
 
 /* ---------- SKELETON ---------- */
+
 .skeleton{
+
     position:relative;
+
     overflow:hidden;
+
     background:#1c2535;
+
     border-radius:18px;
+
 }
 
 .skeleton::before{
+
     content:"";
+
     position:absolute;
+
     inset:0;
+
     transform:translateX(-100%);
-    background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent);
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    transparent,
+
+    rgba(255,255,255,.12),
+
+    transparent
+
+    );
+
     animation:skeleton 1.4s infinite;
+
+}
+
+@keyframes skeleton{
+
+100%{
+
+transform:translateX(100%);
+
+}
+
 }
 
 /* ---------- SCROLL TO TOP ---------- */
+
 .scroll-top{
+
     position:fixed;
+
     right:25px;
+
     bottom:25px;
+
     width:58px;
+
     height:58px;
+
     border:none;
+
     border-radius:50%;
+
     background:linear-gradient(135deg,#0070d1,#3ea6ff);
+
     color:white;
+
     font-size:24px;
+
     cursor:pointer;
+
     z-index:999;
-    box-shadow:0 18px 35px rgba(0,112,209,.45);
+
+    box-shadow:
+
+    0 18px 35px rgba(0,112,209,.45);
+
     transition:.35s;
+
 }
 
 .scroll-top:hover{
-    transform:translateY(-6px) scale(1.08);
+
+    transform:
+
+    translateY(-6px)
+
+    scale(1.08);
+
 }
 
 /* ---------- FOOTER ---------- */
+
 .footer{
+
     margin-top:80px;
+
     padding:55px 20px;
+
     border-top:1px solid rgba(255,255,255,.08);
+
     text-align:center;
+
 }
 
 .footer h3{
+
     font-size:30px;
+
     margin-bottom:15px;
+
     color:#fff;
+
 }
 
 .footer p{
+
     color:#9ca3af;
+
     line-height:2;
+
 }
 
 .footer-social{
+
     display:flex;
+
     justify-content:center;
+
     gap:18px;
+
     margin-top:25px;
+
 }
 
 .footer-social a{
+
     width:48px;
+
     height:48px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     border-radius:50%;
+
     background:#1b2232;
+
     transition:.3s;
+
     font-size:20px;
+
 }
 
 .footer-social a:hover{
+
     background:#0070d1;
+
     transform:translateY(-5px);
+
 }
 
-/* =====================================================
-   RESPONSIVE GRID — single source of truth, no other
-   .games-grid rule exists anywhere above this point
-   except the base repeat(6,1fr) rule.
-===================================================== */
+/* ---------- GLOBAL ANIMATION ---------- */
+
+.fade-up{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ---------- IMAGE GLOW ---------- */
+
+.card-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    to top,
+
+    rgba(0,0,0,.65),
+
+    transparent 50%
+
+    );
+
+}
+
+.card:hover .card-image::after{
+
+    background:
+
+    linear-gradient(
+
+    to top,
+
+    rgba(0,112,209,.18),
+
+    transparent
+
+    );
+
+}
+
+/* ---------- BUTTON EFFECT ---------- */
+
+.buy-btn{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.buy-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:70%;
+
+    height:100%;
+
+    transform:skewX(-25deg);
+
+    background:
+
+    rgba(255,255,255,.25);
+
+    transition:.6s;
+
+}
+
+.buy-btn:hover::before{
+
+    left:150%;
+
+}
+/* ===========================
+   Responsive Grid
+=========================== */
 
 @media (max-width:1400px){
     .games-grid{
@@ -653,11 +1221,6 @@ button{
 
 @media (max-width:768px){
 
-    .games-grid{
-        grid-template-columns:repeat(3,1fr) !important;
-        gap:10px;
-    }
-
     .header{
         flex-direction:column;
         align-items:center;
@@ -667,27 +1230,19 @@ button{
     }
 
     .header h1{
-        font-size:28px;
+        font-size:30px;
         line-height:1.2;
-        white-space:normal;
     }
 
     .header p{
-        font-size:13px;
+        font-size:14px;
     }
 
-    .header-info{
-        align-items:center;
-        width:100%;
-    }
-
-    .search,
-    .search-box{
+    .search{
         width:100%;
         padding:14px 16px;
         border-radius:15px;
-        font-size:14px;
-        box-sizing:border-box;
+        font-size:15px;
     }
 
     .banner{
@@ -697,12 +1252,12 @@ button{
     }
 
     .banner-content h2{
-        font-size:28px;
+        font-size:30px;
         line-height:1.2;
     }
 
     .banner-content p{
-        font-size:14px;
+        font-size:15px;
         margin-bottom:18px;
     }
 
@@ -711,16 +1266,31 @@ button{
         font-size:14px;
     }
 
+    .games-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:12px;
+    }
+
     .card{
         border-radius:14px;
     }
 
+    /* --- تعريف واحد بس للصورة، بدل التعريفين المتعارضين --- */
     .card-image{
-        aspect-ratio:3 / 4;
+        width:100%;
+        aspect-ratio: 3 / 4;
+        height:auto;
+        overflow:hidden;
+        border-radius:14px 14px 0 0;
+        position:relative;
     }
 
     .card-image img{
-        object-position:center 20%;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position: top center;
+        display:block;
     }
 
     .card-content{
@@ -728,17 +1298,14 @@ button{
     }
 
     .card-content h2{
-        font-size:12px;
+        color:#f8fafc;
+        font-size:13px;
         font-weight:700;
         line-height:1.3;
         text-align:center;
+        min-height:34px;
         margin-bottom:6px;
         text-shadow:0 2px 6px rgba(0,0,0,.6);
-        min-height:auto;
-    }
-
-    .game-info{
-        margin-bottom:10px;
     }
 
     .platform{
@@ -747,11 +1314,12 @@ button{
     }
 
     .category{
-        font-size:9px;
+        font-size:10px;
+        margin-bottom:8px;
     }
 
     .buy-btn{
-        padding:8px 6px;
+        padding:8px;
         font-size:11px;
     }
 
@@ -759,20 +1327,12 @@ button{
     .badge{
         display:none !important;
     }
-}
 
-/* Very small phones: keep 3 columns but tighten further */
-@media (max-width:380px){
-    .games-grid{
-        gap:8px;
+    .header-info{
+        align-items:center;
     }
 
-    .card-content h2{
-        font-size:11px;
-    }
-
-    .buy-btn{
-        font-size:10px;
-        padding:7px 4px;
+    .search-box{
+        width:100%;
     }
 }
