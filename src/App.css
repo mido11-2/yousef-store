@@ -521,17 +521,25 @@ button{
 /* ---------- IMAGE ---------- */
 
 .card-image{
-    aspect-ratio:1/1;
-    overflow:hidden;
-    background:#111827;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+    background: #111827;
 }
 
 .card-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-    display:block;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform .3s ease;
+}
+
+.card:hover .card-image img{
+    transform: scale(1.05);
 }
 
 .card:hover img{
@@ -1314,5 +1322,12 @@ transform:translateY(0);
 
 .search-box{
     width:100%;
+}.card-image{
+    aspect-ratio: 3 / 4;
+}
+
+.card-image img{
+    object-fit: cover;
+    object-position: center center;
 }
 }
