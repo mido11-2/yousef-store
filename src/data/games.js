@@ -187,7 +187,7 @@ import mm from "../assets/games/mm.png";
 import min from "../assets/games/min.png";
 import mor1 from "../assets/games/mor1.png";
 import mor2 from "../assets/games/mor2.png";
-import mare from "../assets/games/mara.png";
+import mara from "../assets/games/mara.png";
 
 
 const games = [

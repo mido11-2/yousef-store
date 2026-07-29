@@ -1277,9 +1277,9 @@ transform:translateY(0);
         border-radius:14px;
     }
 
-    .card-image{
-        height:150px;
-    }
+  .card-image{
+    height:190px;
+}
 
     .card-content{
         padding:8px;

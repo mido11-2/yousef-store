@@ -23,9 +23,7 @@ function GameCard({ game }) {
 
         <h2 className="game-title">{game.name}</h2>
 
-        <div className="rating">
-          ⭐⭐⭐⭐⭐
-        </div>
+
 
         <div className="game-info">
 

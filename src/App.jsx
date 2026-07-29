@@ -17,22 +17,6 @@ function App() {
     <div className="app">
       <Header search={search} setSearch={setSearch} />
 
-      <section className="banner">
-        <div className="banner-content">
-          <h2>Welcome to Yousef Store</h2>
-          <p>Download the latest PS4 Games with the fastest service.</p>
-
-          <a
-            href="https://wa.me/201555371568"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="banner-btn">Order Now</button>
-          </a>
-        </div>
-      </section>
-
-      <h2 className="section-title">Latest Games</h2>
 
       <FilterBar />
 
