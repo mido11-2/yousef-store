@@ -1277,21 +1277,20 @@ transform:translateY(0);
 
     /* --- تعريف واحد بس للصورة، بدل التعريفين المتعارضين --- */
     .card-image{
-        width:100%;
-        aspect-ratio: 3 / 4;
-        height:auto;
-        overflow:hidden;
-        border-radius:14px 14px 0 0;
-        position:relative;
-    }
+    width:100%;
+    height:220px;   /* ارتفاع ثابت وواضح بدل aspect-ratio */
+    overflow:hidden;
+    border-radius:14px 14px 0 0;
+    position:relative;
+}
 
-    .card-image img{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        object-position: top center;
-        display:block;
-    }
+.card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position: center top;
+    display:block;
+}
 
     .card-content{
         padding:8px;
