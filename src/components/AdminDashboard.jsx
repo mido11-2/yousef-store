@@ -13,7 +13,32 @@ import {
   updateGame,
   uploadGameImage,
 } from "../lib/supabaseRest";
+const localGamesById = new Map(
+  games.map((game) => [String(game.id), game])
+);
 
+const localGamesByName = new Map(
+  games.map((game) => [
+    game.name.trim().toLowerCase(),
+    game,
+  ])
+);
+
+function resolveAdminGameImage(game) {
+  const localGame =
+    localGamesById.get(String(game.id)) ||
+    localGamesByName.get(
+      String(game.name || "").trim().toLowerCase()
+    );
+
+  const image = game.image || "";
+
+  if (/^https?:\/\//i.test(image)) {
+    return image;
+  }
+
+  return localGame?.image || image;
+}
 const emptyForm = {
   id: "",
   name: "",
@@ -37,8 +62,13 @@ function DashboardRow({ game, onDelete, onSaveOrder, busy }) {
 
   return (
     <tr>
-      <td><img className="admin-thumb" src={game.image} alt="" /></td>
-      <td>{game.name}</td>
+<td>
+  <img
+    className="admin-thumb"
+    src={resolveAdminGameImage(game)}
+    alt={game.name}
+  />
+</td>      <td>{game.name}</td>
       <td>{game.platform}</td>
       <td>{game.category}</td>
       <td>
