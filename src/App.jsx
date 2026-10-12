@@ -7,7 +7,32 @@ import FilterBar from "./components/FilterBar";
 import GameCard from "./components/GameCard";
 import AdminDashboard from "./components/AdminDashboard";
 import { getGames, isSupabaseConfigured, supabase } from "./lib/supabaseRest";
+const localGamesById = new Map(
+  games.map((game) => [String(game.id), game])
+);
 
+const localGamesByName = new Map(
+  games.map((game) => [
+    game.name.trim().toLowerCase(),
+    game,
+  ])
+);
+
+function resolveGameImage(game) {
+  const localGame =
+    localGamesById.get(String(game.id)) ||
+    localGamesByName.get(
+      String(game.name || "").trim().toLowerCase()
+    );
+
+  const image = game.image || "";
+
+  if (/^https?:\/\//i.test(image)) {
+    return image;
+  }
+
+  return localGame?.image || image;
+}
 function Storefront() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("الكل");
@@ -54,11 +79,12 @@ useEffect(() => {
       const rows = await getGames();
       if (!active || !Array.isArray(rows)) return;
 
-      const supabaseGames = rows
-        .map((g) => ({
-          ...g,
-          whatsappOptions: g.whatsapp_options || g.whatsappOptions || [],
-        }))
+const supabaseGames = rows
+  .map((g) => ({
+    ...g,
+    image: resolveGameImage(g),
+    whatsappOptions: g.whatsapp_options || g.whatsappOptions || [],
+  }))
         .filter((g) => g.is_visible !== false)
         .sort((a, b) => {
           const orderA = Number(a.sort_order) || 0;
